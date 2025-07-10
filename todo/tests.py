@@ -54,7 +54,7 @@ class TaskModelTestCase(TestCase):
 class TodoViewTestCase(TestCase):
     def test_index_get(self):
         client = Client()
-        response = Client.get("/")
+        response = client.get("/")
 
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.templates[0].name, "todo/index.html")
